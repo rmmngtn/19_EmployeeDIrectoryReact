@@ -1,4 +1,27 @@
+import React, { Component } from "react"; 
+import DataTable from "./DataTable"; 
+import Nav from "./Nav"; 
+import API from "../utils/API"; 
+import "../styles/DataArea.css";
 
+
+handleSort = headings => { 
+    if (this.state.order === "descend") { 
+        this.setState({ 
+            order: "ascend", 
+        });
+    } else { 
+        this.setState({
+            order: "descend", 
+        });
+    };
+}
+
+
+
+handleSearchChange = (event) => { 
+
+}
 
 
 componentDidMount() { 
