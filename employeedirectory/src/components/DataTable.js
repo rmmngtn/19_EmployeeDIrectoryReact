@@ -1,0 +1,24 @@
+import React from "react"; 
+import DataBody from "./DataBody"; 
+import "../styles/DataTable.css"; 
+
+function DataTable({ headings, users, handleSort }) { 
+    return (
+        <div className="datatable mt-5">
+            <table
+                id="table"
+                className="table tavble-striped table-hover table-">
+                    <thead>
+                        <tr>
+                            {headings.map(({ name, width }) => {
+                                return (
+                                    <th
+                                    className="col"
+                                )
+                            })}
+                        </tr>
+                    </thead>
+                </table>
+        </div>
+    )
+}
