@@ -9,7 +9,7 @@ export default class DataArea extends Component {
         users: [{}],
         order: "descend",
         filteredUsers: [{}]
-    }
+    };
 
     headings = [
         { name: "image", width: "10%" },
@@ -17,9 +17,9 @@ export default class DataArea extends Component {
         { name: "Phone", width: "20%" },
         { name: "Email", width: "20%" },
         { name: "DOB", width: "10%" }
-    ]
+    ];
 
-//     // set order of state in heading 
+ // set order of state in heading 
     handleSort = heading => {
         if (this.state.order === "descend") {
             this.setState({
@@ -63,25 +63,25 @@ export default class DataArea extends Component {
         }
         const sortedUsers = this.state.filteredUsers.sort(compareFnc);
         this.setState({ filteredUsers: sortedUsers });
-    }
+    };
 
     handleSearchChange = event => { 
         console.log(event.target.value); 
         const filter = event.target.value; 
-        const filteredList = this.state.users.filter(item => { 
+        const filteredList = this.state.users.filter((item) => { 
             let values = Object.values(item)
             .join("") 
             .toLowerCase(); 
             return values.indexOf(filter.toLowerCase()) !== -1;
         }); 
         this.setState({ filteredUsers: filteredList });
-    }
+    };
 
     componentDidMount() {
         API.getUsers().then(results => {
             this.setState({
                 users: results.data.results,
-                filteredUsers: results.data.results
+                filteredUsers: results.data.results,
             });
         });
     }
@@ -93,7 +93,7 @@ export default class DataArea extends Component {
                 <div className="data-area" >
                     <DataTable
                         headings={this.headings}
-                        users={this.state.filterUsers}
+                        users={this.state.filteredUsers}
                         handleSort={this.handleSort}
                     />
 
