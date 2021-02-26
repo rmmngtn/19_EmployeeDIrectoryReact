@@ -10,7 +10,7 @@ function DataTable({ headings, users, handleSort }) {
                 className="table tavble-striped table-hover table-">
                 <thead>
                     <tr>
-                        {headings.map(({ name, width }) => {
+                        { headings.map(({ name, width }) => {
                             return (
                                 <th
                                     className="col"
@@ -36,3 +36,6 @@ function DataTable({ headings, users, handleSort }) {
 
 
 export default DataTable;
+
+
+

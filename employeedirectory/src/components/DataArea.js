@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import DataTable from "./DataTable";
-import Nav from "./Nav";
+// import Nav from "./Nav";
 import API from "../utils/API";
 import "../styles/DataArea.css";
 
@@ -8,7 +8,7 @@ export default class DataArea extends Component {
     state = {
         users: [{}],
         order: "descend",
-        filteredUser: [{}]
+        filteredUsers: [{}]
     }
 
     headings = [
@@ -19,7 +19,7 @@ export default class DataArea extends Component {
         { name: "DOB", width: "10%" }
     ]
 
-    // set order of state in heading 
+//     // set order of state in heading 
     handleSort = heading => {
         if (this.state.order === "descend") {
             this.setState({
@@ -30,6 +30,7 @@ export default class DataArea extends Component {
                 order: "descend"
             })
         }
+    
 
         const compareFnc = (a, b) => {
             if (this.state.order === "ascend") {
@@ -88,16 +89,20 @@ export default class DataArea extends Component {
     render() {
         return (
             <>
-                <Nav handleSearchChange={this.handleSearchChange} />
-                <div className="data-area">
+                {/* <Nav handleSearchChange={this.handleSearchChange} /> */}
+                <div className="data-area" >
                     <DataTable
                         headings={this.headings}
                         users={this.state.filterUsers}
                         handleSort={this.handleSort}
                     />
+
+                    <>
+                   
+                    </>
+                    This is where all the things would go.
                 </div>
             </>
         );
     }
 }
-

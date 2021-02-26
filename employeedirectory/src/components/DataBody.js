@@ -13,6 +13,7 @@ function DataBody({ users }) {
     }
 
     return (
+    
         <tbody>
             {users[0] !== undefined && users[0].name !== undefined ? (
                 users.map(({ login, name, picture, phone, email, dob }) => {
@@ -47,7 +48,9 @@ function DataBody({ users }) {
             )}
 
         </tbody>
+       
     );
 }
 
 export default DataBody; 
+
