@@ -5,9 +5,10 @@ import "../styles/Nav.css";
 
 function Nav({ handleSearchChange }) { 
     return ( 
-        <nav className="navbar">
-            
-            <SearchBox />
+        <nav className="navbar navbar-dark">
+            <div className="search">
+            <SearchBox handleSearchChange={handleSearchChange}/>
+            </div>
         </nav>
     )
 }

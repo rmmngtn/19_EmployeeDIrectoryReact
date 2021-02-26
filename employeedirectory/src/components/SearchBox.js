@@ -1,13 +1,10 @@
-import React from "react"; 
-import "../styles/SearchBox.css"; 
+import React from "react";
+import "../styles/SearchBox.css";
 
-
-function SearchBox({handleSearchChange}) { 
-    return ( 
-        null
-        // <div className="searchbox"><input type="text" placeholder="Search..">
-        // </dov>
-    );
+const SearchBox = ({handleSearchChange}) => { 
+    return (
+        <input type="search" placeholder="Search For An Employee" aria-label="Search" onChange={e => handleSearchChange(e)}></input>
+    )
+    
 }
-
 export default SearchBox; 

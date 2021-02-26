@@ -2,11 +2,10 @@ import React from "react";
 import DataArea from "./DataArea";
 
 
-function Main (){
+function Main() {
     return (
         <>
         <DataArea />
-       
         </>
     );
 };

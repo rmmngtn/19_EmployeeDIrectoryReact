@@ -31,7 +31,7 @@ function DataTable({ headings, users, handleSort }) {
                 <DataBody users={users} />
             </table>
         </div>
-    );
+    )
 }
 
 
