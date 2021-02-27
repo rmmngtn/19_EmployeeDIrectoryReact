@@ -80,7 +80,7 @@ npm test
 
 
 ### Deployed App Link
-<>
+<https://rmmngtn.github.io/EmployeeDirectory/>
 
 ## Questions
 ​
