@@ -1,10 +1,38 @@
-import React from "react";
-import "../styles/SearchBox.css";
+// import React from "react";
 
-const SearchBox = ({handleSearchChange}) => { 
+// function SearchBox({ handleSearchChange }) {
+//     return (
+//         <form className="form-inline">
+//         <input type="search" placeholder="Search Employees" 
+//             onChange={e => handleSearchChange(e)}
+//         />
+//         </form>
+//     );
+// }
+
+
+
+
+// export default SearchBox; 
+
+import React from "react";
+
+
+
+const SearchBox = ({handleSearchChange}) => {
     return (
-        <input type="search" placeholder="Search For An Employee" aria-label="Search" onChange={e => handleSearchChange(e)}></input>
-    )
-    
+        <div className="searchbox">
+            <form className="form-inline">
+                <input
+                    className="form-control mr-sm-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                    onChange={e => handleSearchChange(e)}
+                />
+                
+            </form>
+        </div>
+    );
 }
-export default SearchBox; 
+export default SearchBox;

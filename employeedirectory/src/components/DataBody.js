@@ -10,10 +10,8 @@ function DataBody({ users }) {
         const day = dayArray[0];
         const formattedDate = [month, day, year].join("-");
         return formattedDate;
-    }
-
+    };
     return (
-    
         <tbody>
             {users[0] !== undefined && users[0].name !== undefined ? (
                 users.map(({ login, name, picture, phone, email, dob }) => {
@@ -44,13 +42,11 @@ function DataBody({ users }) {
                     );
                 })
             ) : (
-                <> </>
-            )}
-
+                    <> </>
+                )}
         </tbody>
-       
     );
 }
 
-export default DataBody; 
+export default DataBody;
 

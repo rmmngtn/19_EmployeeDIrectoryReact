@@ -7,7 +7,7 @@ function Nav({ handleSearchChange }) {
     return ( 
         <nav className="navbar navbar-dark">
             <div className="search">
-            <SearchBox handleSearchChange={handleSearchChange}/>
+                <SearchBox handleSearchChange={handleSearchChange} />
             </div>
         </nav>
     )
