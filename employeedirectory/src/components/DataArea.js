@@ -43,12 +43,6 @@ class DataArea extends Component {
                 // numerically
                 else if (heading === "name") {
                     return a[heading].first.localeCompare(b[heading].first);
-                } else if (heading === "phone") {
-                    return a[heading].first.localeCompare(a[heading].first);
-                } else if (heading === "dob") {
-                    return a[heading].first.localeCompare(a[heading].date);
-                } else if (heading === "email") {
-                    return a[heading].first.localeCompare(a[heading].first);
                 } else {
                     return (b[heading] - a[heading]);
                 }
@@ -61,12 +55,6 @@ class DataArea extends Component {
                 }
                 // numerically 
                 else if (heading === "name") {
-                    return b[heading].first.localeCompare(a[heading].first);
-                } else if (heading === "phone") {
-                    return b[heading].first.localeCompare(a[heading].first);
-                } else if (heading === "dob") {
-                    return b[heading].first.localeCompare(a[heading].date);
-                } else if (heading === "email") {
                     return b[heading].first.localeCompare(a[heading].first);
                 } else {
                     return b[heading] - a[heading];
@@ -81,7 +69,7 @@ class DataArea extends Component {
     handleSearchChange = (event) => {
         console.log(event.target.value);
         const filter = event.target.value;
-        // console.log(filter, "test");
+        console.log(filter, "test");
         const filteredList = this.state.users.filter((item) => {
             let values = Object.values(item)
                 .join("")
